@@ -12,16 +12,35 @@
     </sprites>
     <sprites name="grp_player">
       <sprite>sprites\spr_player</sprite>
+      <sprite>sprites\spr_plrMovemask</sprite>
     </sprites>
     <sprites name="grp_doodads">
       <sprite>sprites\spr_crateSteel</sprite>
+      <sprite>sprites\spr_treeMed</sprite>
     </sprites>
+    <sprite>sprites\sprite6</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\scr_file_init__.gml</script>
+    <scripts name="grp_file_management">
+      <script>scripts\scr_file_init.gml</script>
+    </scripts>
+    <scripts name="grp_player">
+      <script>scripts\scr_move_init.gml</script>
+      <script>scripts\scr_move.gml</script>
+    </scripts>
   </scripts>
+  <objects name="objects">
+    <object>objects\obj_player</object>
+    <object>objects\obj_tree</object>
+    <object>objects\obj_crateSteel</object>
+    <object>objects\obj_plrMovemask</object>
+    <object>objects\obj_doodadctrl</object>
+  </objects>
+  <rooms name="rooms">
+    <room>rooms\rm_test</room>
+  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>
