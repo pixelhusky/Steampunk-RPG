@@ -9,6 +9,7 @@
     <sprites name="grp_enemy">
       <sprite>sprites\spr_droneBasic</sprite>
       <sprite>sprites\spr_droneAdvanced</sprite>
+      <sprite>sprites\sprite8</sprite>
     </sprites>
     <sprites name="grp_player">
       <sprite>sprites\spr_player</sprite>
@@ -17,7 +18,11 @@
     <sprites name="grp_doodads">
       <sprite>sprites\spr_crateSteel</sprite>
       <sprite>sprites\spr_treeMed</sprite>
+      <sprite>sprites\spr_expOrb</sprite>
+      <sprite>sprites\spr_medkit</sprite>
+      <sprite>sprites\spr_bush</sprite>
     </sprites>
+    <sprite>sprites\sprite10</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -29,15 +34,33 @@
       <script>scripts\scr_move_init.gml</script>
       <script>scripts\scr_move.gml</script>
       <script>scripts\scr_player_init.gml</script>
+      <script>scripts\scr_exp_check.gml</script>
+    </scripts>
+    <scripts name="grp_gui">
+      <script>scripts\draw_exp.gml</script>
+      <script>scripts\draw_health.gml</script>
+      <script>scripts\gui_init.gml</script>
+      <script>scripts\draw_xpstat.gml</script>
+      <script>scripts\draw_hpstat.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">
-    <object>objects\obj_player</object>
-    <object>objects\obj_tree</object>
-    <object>objects\obj_crateSteel</object>
-    <object>objects\obj_plrMovemask</object>
-    <object>objects\obj_doodadctrl</object>
-    <object>objects\obj_startup</object>
+    <objects name="grp_enemies">
+      <object>objects\obj_enemy</object>
+    </objects>
+    <objects name="grp_player">
+      <object>objects\obj_plrMovemask</object>
+      <object>objects\obj_player</object>
+    </objects>
+    <objects name="grp_doodads">
+      <object>objects\obj_expOrb</object>
+      <object>objects\obj_doodadctrl</object>
+      <object>objects\obj_crateSteel</object>
+      <object>objects\obj_tree</object>
+    </objects>
+    <objects name="grp_gui">
+      <object>objects\obj_gui</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_test</room>
