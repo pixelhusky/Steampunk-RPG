@@ -7,20 +7,31 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprites name="grp_enemy">
-      <sprite>sprites\spr_droneBasic</sprite>
-      <sprite>sprites\spr_droneAdvanced</sprite>
-      <sprite>sprites\sprite8</sprite>
+      <sprites name="grp_engi">
+        <sprite>sprites\spr_engiMelee</sprite>
+        <sprite>sprites\spr_engiRanged</sprite>
+      </sprites>
+      <sprites name="grp_drones">
+        <sprite>sprites\spr_droneAdvanced</sprite>
+        <sprite>sprites\spr_droneBasic</sprite>
+      </sprites>
     </sprites>
     <sprites name="grp_player">
       <sprite>sprites\spr_player</sprite>
       <sprite>sprites\spr_plrMovemask</sprite>
     </sprites>
     <sprites name="grp_doodads">
-      <sprite>sprites\spr_crateSteel</sprite>
-      <sprite>sprites\spr_treeMed</sprite>
-      <sprite>sprites\spr_expOrb</sprite>
-      <sprite>sprites\spr_medkit</sprite>
-      <sprite>sprites\spr_bush</sprite>
+      <sprites name="grp_foliage">
+        <sprite>sprites\spr_treeMed</sprite>
+        <sprite>sprites\spr_bush</sprite>
+      </sprites>
+      <sprites name="grp_pickups">
+        <sprite>sprites\spr_medkit</sprite>
+        <sprite>sprites\spr_expOrb</sprite>
+      </sprites>
+      <sprites name="grp_obstacles">
+        <sprite>sprites\spr_crateSteel</sprite>
+      </sprites>
     </sprites>
   </sprites>
   <backgrounds name="background"/>
@@ -52,13 +63,21 @@
       <object>objects\obj_player</object>
     </objects>
     <objects name="grp_doodads">
-      <object>objects\obj_expOrb</object>
-      <object>objects\obj_doodadctrl</object>
-      <object>objects\obj_crateSteel</object>
-      <object>objects\obj_tree</object>
+      <objects name="grp_foliage">
+        <object>objects\obj_tree</object>
+      </objects>
+      <objects name="grp_pickups">
+        <object>objects\obj_expOrb</object>
+      </objects>
+      <objects name="grp_obstacles">
+        <object>objects\obj_crateSteel</object>
+      </objects>
     </objects>
     <objects name="grp_gui">
       <object>objects\obj_gui</object>
+    </objects>
+    <objects name="parent_objects">
+      <object>objects\obj_doodadctrl</object>
     </objects>
   </objects>
   <rooms name="rooms">
