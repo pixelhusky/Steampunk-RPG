@@ -22,5 +22,5 @@ var xavy = (xy2 - xy1)/argument1;
 
 //Draw text
 if (xtl && xbl && xbr && xtr) {
-    draw_text(xx1+xavx,xy1+xavy,string(global.xp) + "/" + string(global.xpmax))
+    draw_text(xx1+xavx,xy1+xavy,string(round(global.xp)) + "/" + string(round(global.xpmax)))
 }

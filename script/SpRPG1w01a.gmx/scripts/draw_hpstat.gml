@@ -22,5 +22,5 @@ var havy = (hy2 - hy1)/argument1;
 
 //Draw text
 if (htl && hbl && hbr && htr) {
-    draw_text(hx1+havx,hy1+havy,string(global.hp) + "/" + string(global.hpmax));
+    draw_text(hx1+havx,hy1+havy,string(round(global.hp)) + "/" + string(round(global.hpmax)));
 }

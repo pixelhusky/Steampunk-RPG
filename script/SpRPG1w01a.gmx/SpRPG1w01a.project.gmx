@@ -17,8 +17,17 @@
       </sprites>
     </sprites>
     <sprites name="grp_player">
-      <sprite>sprites\spr_player</sprite>
       <sprite>sprites\spr_plrMovemask</sprite>
+      <sprites name="grp_Warrior">
+        <sprite>sprites\spr_plrW</sprite>
+      </sprites>
+      <sprites name="grp_Rogue">
+        <sprite>sprites\spr_plrR</sprite>
+      </sprites>
+      <sprites name="grp_Mage">
+        <sprite>sprites\spr_plrM</sprite>
+      </sprites>
+      <sprite>sprites\spr_plrBase</sprite>
     </sprites>
     <sprites name="grp_doodads">
       <sprites name="grp_foliage">
@@ -32,6 +41,11 @@
       <sprites name="grp_obstacles">
         <sprite>sprites\spr_crateSteel</sprite>
       </sprites>
+    </sprites>
+    <sprites name="grp_class">
+      <sprite>sprites\spr_warrior</sprite>
+      <sprite>sprites\spr_rogue</sprite>
+      <sprite>sprites\spr_mage</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background"/>
@@ -50,10 +64,27 @@
       <script>scripts\draw_exp.gml</script>
       <script>scripts\draw_health.gml</script>
       <script>scripts\gui_init.gml</script>
-      <script>scripts\draw_xpstat.gml</script>
-      <script>scripts\draw_hpstat.gml</script>
+      <scripts name="grp_stats">
+        <script>scripts\draw_hpstat.gml</script>
+        <script>scripts\draw_xpstat.gml</script>
+        <script>scripts\draw_level.gml</script>
+      </scripts>
+    </scripts>
+    <scripts name="draw_tools">
+      <script>scripts\draw_text_outline.gml</script>
+    </scripts>
+    <scripts name="grp_startup">
+      <script>scripts\class_select.gml</script>
+      <script>scripts\class_bios.gml</script>
     </scripts>
   </scripts>
+  <fonts name="fonts">
+    <fonts name="grp_gui">
+      <font>fonts\fnt_gui_bold</font>
+      <font>fonts\fnt_gui</font>
+      <font>fonts\fnt_def</font>
+    </fonts>
+  </fonts>
   <objects name="objects">
     <objects name="grp_enemies">
       <object>objects\obj_enemy</object>
@@ -78,10 +109,19 @@
     </objects>
     <objects name="parent_objects">
       <object>objects\obj_doodadctrl</object>
+      <object>objects\obj_buttoncon</object>
+    </objects>
+    <objects name="grp_buttons">
+      <objects name="grp_class">
+        <object>objects\obj_warrior</object>
+        <object>objects\obj_mage</object>
+        <object>objects\obj_rogue</object>
+      </objects>
     </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_test</room>
+    <room>rooms\rm_class</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

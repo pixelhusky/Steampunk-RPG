@@ -27,4 +27,4 @@ if (self.class = 'Warrior')
     global.hpmax = 100;
 }
 global.hp = global.hpmax;
-global.class = self.class;
+
