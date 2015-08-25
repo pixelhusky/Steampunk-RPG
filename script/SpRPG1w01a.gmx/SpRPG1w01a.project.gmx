@@ -18,7 +18,6 @@
       <sprite>sprites\spr_crateSteel</sprite>
       <sprite>sprites\spr_treeMed</sprite>
     </sprites>
-    <sprite>sprites\sprite6</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -29,6 +28,7 @@
     <scripts name="grp_player">
       <script>scripts\scr_move_init.gml</script>
       <script>scripts\scr_move.gml</script>
+      <script>scripts\scr_player_init.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">
@@ -37,6 +37,7 @@
     <object>objects\obj_crateSteel</object>
     <object>objects\obj_plrMovemask</object>
     <object>objects\obj_doodadctrl</object>
+    <object>objects\obj_startup</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_test</room>
