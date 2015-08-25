@@ -22,7 +22,6 @@
       <sprite>sprites\spr_medkit</sprite>
       <sprite>sprites\spr_bush</sprite>
     </sprites>
-    <sprite>sprites\sprite10</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
