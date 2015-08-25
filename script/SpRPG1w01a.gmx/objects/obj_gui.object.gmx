@@ -61,6 +61,7 @@ draw_exp(view_xview,view_yview+16,view_xview+100,view_yview+32);
 //Draw stats on mouse_enter
 var divx = 4;
 var divy = 8;
+draw_set_color(c_white);
 draw_xpstat(divx, divy);
 draw_hpstat(divx, divy);
 </string>
