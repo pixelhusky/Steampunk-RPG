@@ -28,6 +28,7 @@
         <sprite>sprites\spr_plrM</sprite>
       </sprites>
       <sprite>sprites\spr_plrBase</sprite>
+      <sprite>sprites\spr_Pshade</sprite>
     </sprites>
     <sprites name="grp_doodads">
       <sprites name="grp_foliage">
@@ -73,16 +74,22 @@
     <scripts name="draw_tools">
       <script>scripts\draw_text_outline.gml</script>
     </scripts>
-    <scripts name="grp_startup">
+    <scripts name="class_setup">
       <script>scripts\class_select.gml</script>
       <script>scripts\class_bios.gml</script>
+      <script>scripts\class_info.gml</script>
+      <script>scripts\class_sprites.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">
+    <font>fonts\fnt_def</font>
     <fonts name="grp_gui">
       <font>fonts\fnt_gui_bold</font>
       <font>fonts\fnt_gui</font>
-      <font>fonts\fnt_def</font>
+    </fonts>
+    <fonts name="grp_class">
+      <font>fonts\fnt_class</font>
+      <font>fonts\fnt_class2</font>
     </fonts>
   </fonts>
   <objects name="objects">
@@ -109,19 +116,17 @@
     </objects>
     <objects name="parent_objects">
       <object>objects\obj_doodadctrl</object>
-      <object>objects\obj_buttoncon</object>
+      <object>objects\class_buttons</object>
     </objects>
     <objects name="grp_buttons">
-      <objects name="grp_class">
-        <object>objects\obj_warrior</object>
-        <object>objects\obj_mage</object>
-        <object>objects\obj_rogue</object>
-      </objects>
+      <object>objects\obj_warrior</object>
+      <object>objects\obj_mage</object>
+      <object>objects\obj_rogue</object>
     </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_test</room>
     <room>rooms\rm_class</room>
+    <room>rooms\rm_test</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

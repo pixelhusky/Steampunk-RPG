@@ -15,16 +15,29 @@ global.hpmax = 100;
 //Creating Mask
 instance_create(x,y,obj_plrMovemask);
 
+//Sprite Sets
+
+//Warrior
+wSprite = spr_plrW;
+
+//Mage
+mSprite = spr_plrM;
+
+//Rogue
+rSprite = spr_plrR;
+
 //Set Class and health
 if (self.class = 'Warrior') 
 {
     global.hpmax = 120;
+    sprite_index = wSprite;
 } else if (self.class = 'Mage') 
 {
     global.hpmax = 80;
+    sprite_index = mSprite;
 } else if (self.class = 'Rogue') 
 {
     global.hpmax = 100;
+    sprite_index = rSprite;
 }
 global.hp = global.hpmax;
-

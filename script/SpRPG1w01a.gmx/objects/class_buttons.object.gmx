@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-99999999</depth>
+  <depth>0</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -25,7 +25,31 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>gui_init();
+            <string>///Arrays
+w = 0;
+m = 1;
+r = 2;
+class_select();
+//shows
+show[w] = false;
+show[m] = false;
+show[r] = false;
+
+//Attack DEF = 3
+atkprev[w] = 5;
+atkprev[m] = 6;
+atkprev[r] = 3;
+
+//Defense DEF = 2
+defprev[w] = 4;
+defprev[m] = 2;
+defprev[r] = 3;
+
+//Health DEF = 100
+hpprev[w] = 120;
+hpprev[m] = 80;
+hpprev[r] = 100;
+
 </string>
           </argument>
         </arguments>
@@ -48,27 +72,22 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Drawing Health and Xp
-/*
-Values:
-XP = [view_xview, view_yview+16, view_xview+100, view_yview+32]
-HP = [view_xview, view_yview, view_xview+100,view_yview+16]
-*/
-//Drawing expbar/healtbar
-draw_health(view_xview, view_yview, view_xview+100, view_yview+16);
-draw_exp(view_xview,view_yview+16,view_xview+100,view_yview+32);
+            <string>///Draw stats
 
-//Set Color and font
+//Set font and display stats
 draw_set_color(c_white);
 draw_set_halign(fa_left);
-draw_set_font(fnt_def);
+draw_set_font(fnt_class);
+class_info(32);
 
-//Draw stats on mouse_enter
-var divx = 4;
-var divy = 10;
-draw_xpstat(divx, divy);
-draw_hpstat(divx, divy);
-draw_level(c_red);
+//Set font and display info
+draw_set_halign(fa_left);
+draw_set_font(fnt_class2);
+class_bios();
+
+//Draw the class sprites for preview
+var mag = 10;
+class_sprites(mag, mag);
 </string>
           </argument>
         </arguments>
