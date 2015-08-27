@@ -1,4 +1,5 @@
 ///scr_player_init(Class(string '[Warrior : Mage : Rogue]'))
+instance_create(x,y,obj_plrMovemask);
 self.class = argument0;
 //Levels
 global.level = 1;

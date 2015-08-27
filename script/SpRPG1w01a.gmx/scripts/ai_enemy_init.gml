@@ -1,12 +1,13 @@
-///ai_enemy_init(speed, view distance)
+///ai_enemy_init(speed, view distance (pixels))
 
 //Set some variables
-var varspd = argument0
-var spd = varspd;
-var vd = argument1
-var target = instance_nearest(x,y,obj_player)
-var detect = distance_to_object(target) <= vd;
-var see = collision_line(x,y,target.x,target.y,target, false, true);
-var alerted = false;
-var state = 'idle';
+spd = argument0
+varspd = argument0;
+vd = argument1
+if (instance_exists(obj_player)) {
+    target = instance_nearest(x,y,obj_player)
+}
+see = false;
+detect = false;
+state = 'idle';
 
