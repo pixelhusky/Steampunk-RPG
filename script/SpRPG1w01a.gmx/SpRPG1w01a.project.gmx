@@ -80,6 +80,12 @@
       <script>scripts\class_info.gml</script>
       <script>scripts\class_sprites.gml</script>
     </scripts>
+    <scripts name="grp_ai">
+      <scripts name="grp_enemy">
+        <script>scripts\ai_enemy_init.gml</script>
+        <script>scripts\ai_enemy.gml</script>
+      </scripts>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_def</font>
@@ -95,6 +101,7 @@
   <objects name="objects">
     <objects name="grp_enemies">
       <object>objects\obj_enemy</object>
+      <object>objects\enemy_parent</object>
     </objects>
     <objects name="grp_player">
       <object>objects\obj_plrMovemask</object>
